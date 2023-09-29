@@ -2,7 +2,6 @@ import { galleryItems } from './gallery-items.js';
 // Change code below this line
 console.log(galleryItems);
 
-/*створення і рендер розмітки на підставі масиву даних galleryItems*/
 
 const galleryList = document.querySelector(".gallery");
 galleryList.insertAdjacentHTML("beforeend", createMarkup(galleryItems));
@@ -26,7 +25,6 @@ return arr
     .join("");
 }
 
-/*Реалізація делегування на ul.gallery і отримання url великого зображення.*/ 
 
 galleryList.addEventListener("click", handleGalleryClick);
 
