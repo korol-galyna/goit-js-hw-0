@@ -28,28 +28,8 @@ return arr
     .join("");
 }
 
-galleryList.addEventListener("click", handleGalleryClick);
-
-function handleGalleryClick(event) {
-    event.preventDefault(); 
-
-    const target = event.target;
-    if (target.nodeName !== "IMG") {
-        return;
-    }
-    
-    const largeImageURL = target.dataset.source;
-    openModalWithImage(largeImageURL);
-  }
-  
-  function openModalWithImage(imageURL) {
-    const lightbox = new SimpleLightbox(".gallery a", {
-        captionsData: "alt",   
-    });
-
-    setTimeout(() => {
-        lightbox.open();
-      }, 250);
-  }
-
-  
+  const lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: "alt",
+    captions: true, 
+    captionDelay: 250, 
+   }); 
